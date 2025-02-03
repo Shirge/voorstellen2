@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="js/themeCheck.js">
+        // Check system theme and change to it
+    </script>
+    <script defer src="js/themeChange.js">
+        // Theme change script
+    </script>
+    <script defer src="js/topFunction.js">
+        // Button to scroll to top
+    </script>
+    <script defer src="js/gallery.js">
+        // Buttons to switch picture in gallery
+    </script>
+    <script>
+        // Magic flash of unstyled content fix for Firefox by declaring an empty variable???
+        let FF_FOUC_FIX;
+    </script>
+</head>
+
+<body class="shadow" onload="themeCheck()">
+    <header>
+        <input type="image" src="img/moon.svg" alt="Theme change button" id="theme">
+    </header>
+    <main id="game2">
+        <img src="" alt="Game" id="gameImage">
+        <section id="gameDescription">
+            <h2>De Game</h2>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum dolores deleniti libero adipisci
+                assumenda sunt neque sed odit repellat? Illum ab laborum enim ratione iste nulla sapiente id facilis
+                quibusdam.
+                Quasi rerum, dolorum error autem pariatur ex excepturi, laborum eos, cum doloremque reprehenderit
+                necessitatibus illum? Perspiciatis iure sunt, amet, accusantium nam expedita in maxime dolore
+                cupiditate aspernatur, vel quisquam ipsam.
+                Tempore, aspernatur dolor veniam ex, error dicta, quae fugiat repudiandae ipsam optio consectetur.
+                Quidem voluptate voluptates est blanditiis commodi impedit. Exercitationem est quae, adipisci magnam
+                aliquam officiis ad illum doloribus?
+            </p>
+        </section>
+        <div id="gallery">
+            <h2>Fotogalerij</h2>
+            <ul>
+                <li><img src="img/GarfieldPlanet.png" alt="screenshot" class="galleryImage"></li>
+                <li><img src="img/GarfieldPlanet.png" alt="screenshot" class="galleryImage"></li>
+                <li><img src="img/GarfieldPlanet.png" alt="screenshot" class="galleryImage"></li>
+            </ul>
+            <input type="button" id="galleryLeftButton" value="&lt;">
+            <input type="button" id="galleryRightButton" value="&gt;">
+        </div>
+    </main>
+    <input type="button" id="topButton" value="^">
+    <footer></footer>
+</body>
+
+</html>
