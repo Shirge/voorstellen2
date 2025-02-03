@@ -1,20 +1,20 @@
-const systemDarkTheme = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+const systemlightTheme = (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches);
 const themeButton = document.getElementById("theme");
-var darkTheme;
+var lightTheme;
 var imageSrc;
 
 function themeCheck() {
-    if (systemDarkTheme) {
-        darkTheme = false;
+    if (systemlightTheme) {
+        lightTheme = true;
     } else {
-        darkTheme = true
+        lightTheme = false
     }
-    if (darkTheme) {
-        themeButton.src = "img/light.svg";
-    } else {
-        darkTheme = true;
-        document.body.setAttribute("theme", "dark");
+
+    if (lightTheme) {
+        themeButton.src = "img/sun.svg";
+        document.body.setAttribute("theme", "light");
         document.body.classList.toggle("shadow");
-        themeButton.src = "img/dark.svg";
+    } else {
+        themeButton.src = "img/moon.svg";
     }
 };

@@ -1,16 +1,20 @@
 /*Theme colors*/
 :root {
-    --header-color: #808080;
-    --article-color: #B0B0B0;
-    --top-button-color: rgba(196, 196, 196, 0.9);
-    --text-color: #000000;
+    --header-color: #505058;
+    --article-color: #808088;
+    --div-color: #707078;
+    --top-button-color: rgba(40, 40, 40, 0.8);
+    --skill-color: #808088;
+    --text-color: #FFFFFF;
 }
 
-[theme="dark"] {
-    --header-color: #404040;
-    --article-color: #808080;
-    --top-button-color: rgba(13, 13, 13, 0.8);
-    --text-color: #FFFFFF;
+[theme="light"] {
+    --header-color: #888080;
+    --article-color: #B8B0B0;
+    --text-color: #000000;
+    --top-button-color: rgba(175, 175, 175, 0.9);
+    --skill-color: #D8D0D0;
+    --div-color: #C8C0C0;
 }
 
 /*Background dim when in dark mode*/
@@ -24,7 +28,7 @@ html {
 
 body {
     margin: 0px;
-    background-image: none;
+    background-image: "img/GarfieldPlanet.png";
 }
 
 header {
@@ -53,12 +57,32 @@ main {
     padding: 100px 80px;
     display: flex;
     flex-direction: column;
-    gap: 55px;
+    gap: 30px;
     align-items: center;
     background-color: var(--article-color);
 }
 
-.div {
+#index {
+    background-image: none;
+}
+
+#game1 {
+    background-image: none;
+}
+
+#game2 {
+    background-image: none;
+}
+
+#game3 {
+    background-image: none;
+}
+
+#game4 {
+    background-image: none;
+}
+
+div {
     width: 800px;
     padding: 10px;
     display: flex;
@@ -67,26 +91,160 @@ main {
 }
 
 #portrait {
-        width: 200px;
-        height: 200px;
-        border-radius: 100%;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+}
+
+h2 {
+    font-size: 22pt;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 0;
 }
 
 .skills {
+    width: 325px;
+    height: 200px;
+    padding: 10px 30px;
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
+    border: 2px solid #000000;
+    background-color: var(--div-color);
+}
+
+.skills > ul > li {
+    height: 25px;
+    padding: 5px 10px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+    background-color: var(--skill-color);
+    border: 1px solid #000000;
+}
+
+.skill-logo {
+    max-width: 25px;
+    height: 25px;
+}
+
+#games {
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+}
+
+#games > h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+}
+
+#games > ul {
+    gap: 30px;
+}
+
+#games > ul > li {
+    box-sizing: content-box;
+    width: 385px;
+    height: 200px;
+}
+
+a {
+    display: block;
+    border: 2px solid #000000;
+    width: 100%;
+    height: 100%;
+}
+
+.future {
     width: 325px;
     padding: 10px 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid #000000;
+    border: 2px solid #000000;
+    background-color: var(--div-color);
 }
 
-ul {
-    list-style: none;
-}
-
-h1 {
+.future > h2 {
     text-decoration: underline;
+}
+
+#gameImage {
+    width: 800px;
+    height: 300px;
+    border: 2px solid #000000;
+}
+
+#gameDescription {
+    width: 800px;
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#gameDescription > h2 {
+    margin: 0;
+}
+
+#gallery {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    border: 2px solid #000000;
+    background-color: var(--div-color);
+}
+
+.galleryImage {
+    width: 192px;
+    height: 108px;
+    background-color: #000000;
+}
+
+#galleryLeftButton, #galleryRightButton {
+    position: absolute;
+    font-weight: bold;
+    width: 25px;
+    height: 25px;
+    border: none;
+    border-radius: 50%;
+}
+
+#galleryLeftButton {
+    left: 12%;
+    bottom: 30%;
+}
+
+#galleryRightButton {
+    right: 12%;
+    bottom: 30%;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    background-color: var(--header-color);
+    align-items: center;
+    padding: 0px 20px;
 }
 
 #topButton {
@@ -102,7 +260,7 @@ h1 {
     background-color: var(--top-button-color);
     color: var(--text-color);
     cursor: pointer;
-    padding: 15px;
+    padding: 10px 15px;
     border-radius: 10px;
-    font-size: 18px;
+    font-size: 24px;
 }

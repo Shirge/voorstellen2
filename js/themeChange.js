@@ -1,13 +1,13 @@
 themeButton.onclick = function themeChange() {
-    if (darkTheme) {
-        darkTheme = false;
+    if (lightTheme) {
+        lightTheme = false;
         document.body.removeAttribute("theme");
-        themeButton.src = "img/light.svg";
+        themeButton.src = "img/moon.svg";
         document.body.classList.toggle("shadow");
     } else {
-        darkTheme = true;
-        document.body.setAttribute("theme", "dark");
+        lightTheme = true;
+        document.body.setAttribute("theme", "light");
         document.body.classList.toggle("shadow");
-        themeButton.src = "img/dark.svg";
+        themeButton.src = "img/sun.svg";
     }
 };
